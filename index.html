@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Task</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header class="d-flex align-items-center text-bg-primary p-2 mb-2">
+      <img src="image.png" alt="logo" class="me-3" />
+      <h1>Название сайта</h1>
+    </header>
+    <nav class="text-bg-primary p-2 mb-2 container">
+      <div class="container">
+        <ol class="d-flex">
+          <li class="me-2">
+            <a href="#main" title="Главная часть" class="text-dark"> Ссылки </a>
+          </li>
+          <li>
+            <a href="#mainForm" title="Форма" class="text-dark"> Форма </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div>
+        <div style="display: flex;">
+            <div>Количество девайсов: </div>
+            <div><label><input name="count" type="text"></label></div>
+        </div>
+        <div style="display: flex;">
+            <div>Форма:</div>
+            <div>
+                <select name="type">
+                    <option value="1">Круглая</option>
+                    <option value="2">Квадратная</option>
+                    <option value="3">Прямоугольная</option>
+                </select>
+            </div>
+        </div>
+  
+        <div id="radios" style="display: none;">
+            <div>Цвет:</div>
+            <div>
+                <div>
+                    <label><input type="radio" name="options" value="op1">Синий</label>
+                    <label><input type="radio" name="options" value="op2">Белый</label>
+                </div>
+            </div>
+        </div>
+  
+        <div id="checkboxes" style="display: none;">
+            <div>Доп опции:</div>
+            <div>
+                <label><input type="checkbox" name="properties" value="pr1">Большой</label>
+                <label><input type="checkbox" name="properties" value="pr2">Стеклянный</label>
+                <label><input type="checkbox" name="properties" value="pr3">Прозрачный</label>
+            </div>
+        </div>
+    </div>
+    <div>
+        Итого к оплате: <span id="result"></span>
+    </div>
+    </div>
+  <script src="index.js"></script>
+    <div class="body text-bg-primary p-2 mb-2 container">
+      <div class="container">
+        <ol id="main">
+          <li>
+            <a href="http://example.com/"> http://example.com/ </a>
+          </li>
+          <li>
+            <a href="https://example.com/"> https://example.com/ </a>
+          </li>
+          <li>
+            <a
+              href="ftp://public.ftp-servers.example.com/mydirectory/myfile.txt"
+            >
+              ссылка на файл на сервер FTP без авторизации
+            </a>
+          </li>
+          <li>
+            <a
+              href="ftp://user001:secretpassword@private.ftp-servers.example.com/mydirectory/myfile.txt"
+            >
+              ссылка на файл на сервере FTP с авторизацией
+            </a>
+          </li>
+          <li>
+            <a href="https://reactjs.org?#a-stateful-component">
+              ссылка на фрагмент страницы некоторого сайта
+            </a>
+          </li>
+          <li>
+            <a href="#footer"> ссылка на фрагмент текущей страницы </a>
+          </li>
+          <li>
+            <a
+              href="https://market.yandex.ru/catalog--mobilnye-telefony/22491359/list?rs=eJwz4vfiFuI0NbUwNDc0MDNPYAQAGEcC6w%2C%2C&hid=91491&how=dprice&local-offers-first=0&glfilter=7893318%3A7701962"
+            >
+              ссылка с двумя параметрами в URL
+            </a>
+          </li>
+          <li>
+            <a> ссылка без href </a>
+          </li>
+          <li>
+            <a href=""> ссылка с пустым href </a>
+          </li>
+          <li>
+            <a href="https://example.com/" rel="nofollow">
+              ссылка, по которой запрещен переход поисковикам
+            </a>
+          </li>
+          <!--noindex-->
+          <li>
+            <a href="https://example.com/">
+              запрещенную для индексации поисковиками
+            </a>
+          </li>
+          <!--/noindex-->
+          <li>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.<a
+                href="https://example.com/"
+                >контекстная в тексте абзаца</a
+              >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </li>
+          <li>
+            <a href="https://reactjs.org">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+                alt="react-picture"
+                width="40"
+                height="40"
+              />
+            </a>
+          </li>
+          <li>
+            <img
+              src="https://www.w3schools.com/tags/workplace.jpg"
+              alt="Workplace"
+              usemap="#workmap"
+              width="250"
+              height="379"
+            />
+
+            <map name="workmap">
+              <area
+                shape="rect"
+                coords="34,44,270,350"
+                alt="Computer"
+                href="https://www.simbans.com/products/tangoxl-detachable-keyboard?variant=39369083715639&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
+              />
+              <area
+                shape="rect"
+                coords="290,172,333,250"
+                alt="Phone"
+                href="https://indexiq.ru/product/apple-iphone-13-pro-1tb-alpine-green/"
+              />
+              <area
+                shape="circle"
+                coords="337,300,44"
+                alt="Cup of coffee"
+                href="https://lubofamily.ru/"
+              />
+            </map>
+          </li>
+          <li>
+            <a href="second.html"> абсолютная гиперссылка </a>
+          </li>
+          <li>
+            <a href="./about/second.html">
+              относительная на страницу в текущем каталоге
+            </a>
+          </li>
+          <li>
+            <a href="./">
+              относительная на страницу в каталоге уровнем выше текущего
+            </a>
+          </li>
+          <li>
+            <a href="../">
+              относительная на страницу в каталоге двумя уровнями выше
+            </a>
+          </li>
+          <li>
+            <a href="/"> сокращенная на главную </a>
+          </li>
+          <li>
+            <a href="/index"> сокращенная ссылку на внутреннюю </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="order mb-2">
+      <div class="table">
+        <div class="container">
+          <table>
+            <tbody>
+              <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+              </tr>
+              <tr class="even bg-success">
+                <td colspan="3">Ячейка 11 объединенная с 12 и 13</td>
+              </tr>
+              <tr>
+                <td colspan="3">Ячейка 21 объединенная с 22 и 23</td>
+              </tr>
+              <tr class="even bg-success">
+                <td colspan="3">Ячейка 31 объединенная с 32 и 33</td>
+              </tr>
+              <tr>
+                <td colspan="3">Ячейка 41 объединенная с 42 и 43</td>
+              </tr>
+              <tr class="even bg-success">
+                <td colspan="3">Ячейка 51 объединенная с 52 и 53</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="form text-bg-primary p-2 mb-2">
+        <div class="container">
+          <form action="index.php" id="mainForm">
+            <label for="name">Имя:</label>
+            <input id="name" type="text" name="name" placeholder="Nmae" />
+            <br />
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email" placeholder="Email" />
+            <br />
+            <label for="date">Дата рождения:</label>
+            <input id="date" type="date" name="date" />
+            <br />
+            <label>Пол</label>
+            <input id="male" type="radio" name="sex" value="Мужчина" />
+            <label for="male">Мужчина</label>
+            <input id="female" type="radio" name="sex" value="Женщина" />
+            <label for="female">Женщина</label>
+            <br />
+            <label>Количество конечностей</label>
+            <input id="limb1" type="radio" name="limb" value="1" />
+            <label for="limb1">1</label>
+            <input id="limb2" type="radio" name="limb" value="2" />
+            <label for="limb2">2</label>
+            <br />
+            <label>Сверхспособность</label>
+            <select name="select">
+              <option value="im">бессмертие</option>
+              <option value="th">прохождение сквозь стены</option>
+              <option value="fl">левитация</option>
+            </select>
+            <br />
+            <label for="bio">Биография:</label>
+            <textarea
+              id="bio"
+              cols="40"
+              rows="5"
+              placeholder="Bio"
+              class="w-75"
+            ></textarea>
+            <br />
+            <label for="contract">Ознакомился с контрактом</label>
+            <input id="contract" type="checkbox" name="contract" />
+            <br />
+            <input type="submit" value="Отсправить" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="text-bg-primary p-2">2019</footer>
+  </body>
+</html>
